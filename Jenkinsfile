@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'shachar249/hello_python_new' }
+        dockerfile { filename 'Dockerfile2' }
     }
     stages {
         stage('Test') {

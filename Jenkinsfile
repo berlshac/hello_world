@@ -1,11 +1,15 @@
 pipeline {
     agent {
-        docker { image 'node:16.13.1-alpine' }
+        docker { image 'ubuntu' }
     }
     stages {
         stage('Test') {
             steps {
-                sh 'node --version'
+                sh 'pwd'
+                sh 'echo "hello"'
+                sh 'apt-get update'
+                sh 'apt install iputils-ping -y'
+                
             }
         }
     }

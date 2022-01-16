@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'shachar249/ping:tagname' }
+        docker { image 'shachar249/ping' }
     }
     stages {
         stage('Test') {

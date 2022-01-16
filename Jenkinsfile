@@ -1,13 +1,11 @@
 pipeline {
     agent {
-    dockerfile {
-        filename 'Dockerfile2'
+        docker { image 'shachar249/ping:tagname' }
     }
-}
     stages {
         stage('Test') {
             steps {
-                true
+                sh 'ping 8.8.8.8 -c 5'
             }
         }
     }

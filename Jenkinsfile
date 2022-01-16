@@ -6,11 +6,6 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'node --version'
-                sh 'docker ps -a'
-                sh 'docker images'
-                sh 'mkdir hello'
-                sh 'pwd'
-                sh ' echo "hello" '
             }
         }
     }

@@ -1,11 +1,11 @@
 pipeline {
     agent {
-        docker { image 'shachar249/ping' }
+        docker { image 'shachar249/hello_python_new' }
     }
     stages {
         stage('Test') {
             steps {
-                sh 'ping 8.8.8.8 -c 5'
+                sh 'python3 main.py'
             }
         }
     }

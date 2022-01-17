@@ -8,7 +8,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "My name is ${NAME}"'
+                echo "My name is ${NAME}"
+                pwd
+                ll
             }
         }
     }

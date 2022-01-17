@@ -1,14 +1,16 @@
 pipeline {
-    agent {
-        dockerfile { filename 'Dockerfile2' }
+    agent any
+
+    environment {
+        NAME = 'user'
     }
+
     stages {
-        stage('Test') {
+        stage('Build') {
             steps {
-                sh 'python3 main.py'
-                sh 'python3 main.py'
-                sh 'python3 main.py'
+                echo "My name is ${NAME}"
             }
         }
     }
 }
+

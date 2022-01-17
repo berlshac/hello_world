@@ -1,11 +1,15 @@
 pipeline {
     agent any
     stages {
-        stage('Example') {
+        stage('Test') {
             steps {
-                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                sh './action1.sh'
             }
         }
     }
+    post {
+        always {
+            junit 'build/reports/**/*.xml'
+        }
+    }
 }
-

@@ -9,8 +9,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo "My name is ${NAME}"
-                pwd
-                ll
+                sh'pwd'
+                sh'll'
             }
         }
     }

@@ -1,16 +1,9 @@
 pipeline {
     agent any
-
-    environment {
-        NAME = 'user'
-    }
-
     stages {
-        stage('Build') {
+        stage('Example') {
             steps {
-                echo "My name is ${NAME}"
-                sh'pwd'
-                sh'll'
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
             }
         }
     }
